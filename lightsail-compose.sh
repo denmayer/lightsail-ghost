@@ -22,5 +22,8 @@ sudo curl -o /srv/docker/docker-compose.yml https://raw.githubusercontent.com/de
 sudo curl -o /etc/systemd/system/docker-compose-app.service https://raw.githubusercontent.com/denmayer/lightsail-ghost/main/docker-compose-app.service
 sudo systemctl enable docker-compose-app
 
+sudo mkdir /var/lib/ghost
+sudo mkdir /var/lib/ghost/content
+
 # start up the application via docker-compose
 sudo docker-compose -f /srv/docker/docker-compose.yml up -d
