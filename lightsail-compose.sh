@@ -3,6 +3,7 @@
 sudo apt-get update && sudo apt-get install docker.io -y
 sudo systemctl start docker
 sudo systemctl enable docker
+sudo apt-get install awscli
 
 # make it so you don't need to sudo to run docker commands
 usermod -aG docker ubuntu
@@ -24,6 +25,6 @@ sudo systemctl enable docker-compose-app
 
 sudo mkdir /var/lib/ghost
 sudo mkdir /var/lib/ghost/content
-
+sudo aws s3 cp s3://lightsail-ghost-content/config.production.json /var/lib/ghost/config.production.json
 # start up the application via docker-compose
 sudo docker-compose -f /srv/docker/docker-compose.yml up -d
