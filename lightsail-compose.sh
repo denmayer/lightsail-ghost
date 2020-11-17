@@ -20,7 +20,7 @@ sudo curl -o /srv/docker/docker-compose.yml https://raw.githubusercontent.com/de
 # copy in systemd unit file and register it so our compose file runs 
 # on system restart
 sudo curl -o /etc/systemd/system/docker-compose-app.service https://raw.githubusercontent.com/denmayer/lightsail-ghost/main/docker-compose-app.service
-systemctl enable docker-compose-app
+sudo systemctl enable docker-compose-app
 
 # start up the application via docker-compose
 sudo docker-compose -f /srv/docker/docker-compose.yml up -d
