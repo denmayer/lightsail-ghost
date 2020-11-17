@@ -15,7 +15,7 @@ chmod +x /usr/local/bin/docker-compose
 # if you change this, change the systemd service file to match
 # WorkingDirectory=[whatever you have below]
 sudo mkdir /srv/docker
-sudo curl -o /srv/docker/docker-compose.yml https://raw.githubusercontent.com/denmayer/lightsail-ghost/master/docker-compose.yml
+sudo curl -o /srv/docker/docker-compose.yml https://raw.githubusercontent.com/denmayer/lightsail-ghost/main/docker-compose.yml
 
 # copy in systemd unit file and register it so our compose file runs 
 # on system restart
