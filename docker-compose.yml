@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+    ghost:
+        container_name: blog
+        ports:
+            - '80:2368'
+        environment:
+            - 'url=https://blog.denismayer.com/'
+        volumes:
+            - '/var/lib/ghost/content:/var/lib/ghost/content'
+            - '/var/lib/ghost/config.production.json:/var/lib/ghost/config.production.json'
+        image: ghost
